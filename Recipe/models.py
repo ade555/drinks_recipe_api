@@ -1,3 +1,12 @@
 from django.db import models
 
-# Create your models here.
+class RecipeIngredients(models.Model):
+    ingredient_name = models.ManyToManyField('Recipe')
+
+class Recipe(models.Model):
+    name = models.CharField(max_length=35)
+    category = models.CharField(max_length=35)
+    image = models.URLField()
+    ingredients = models.ManyToManyField(RecipeIngredients)
+    favourite = models.BooleanField(default=False)
+    instructions = models.TextField()

@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # CUSTOM
     'rest_framework',
+    'import_export',
+    'Recipe',
 ]
 
 MIDDLEWARE = [
