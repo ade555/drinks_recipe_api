@@ -1,7 +1,7 @@
 from django.db import models
 
 class RecipeIngredients(models.Model):
-    ingredient_name = models.ManyToManyField('Recipe')
+    ingredient_name = models.CharField(max_length=70)
 
 class Recipe(models.Model):
     name = models.CharField(max_length=35)
